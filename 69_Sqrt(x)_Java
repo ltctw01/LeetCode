@@ -1,0 +1,11 @@
+class Solution {
+    public int mySqrt(int x) {
+        if (x <= 0 )
+            return x;
+        double temp = (x+x/x)/2;
+        for (int i = 0; i < 40; i ++){
+            temp = (temp + x/temp)/2;
+        }
+        return Math.abs((int)temp);
+    }
+}
